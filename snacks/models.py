@@ -6,3 +6,6 @@ class Snack(models.Model):
     name = models.CharField(max_length=64)
     purchaser = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
     description = models.TextField(default='this text to sell tomato.')
+
+    def __str__(self) -> str:
+        return self.name
